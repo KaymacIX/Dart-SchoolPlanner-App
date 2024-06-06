@@ -28,6 +28,8 @@ class _AddEventState extends State<AddEvent> {
             "Add Event",
             style: TextStyle(
               color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
           actions: [
@@ -67,6 +69,8 @@ class _AddEventState extends State<AddEvent> {
                       hintText: "Event",
                       hintStyle: TextStyle(
                         color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
                       ),
                     ),
                   ),
@@ -91,7 +95,13 @@ class _AddEventState extends State<AddEvent> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("Active"),
+                    Text("Active",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
                     Spacer(),
                     CupertinoSwitch(value: true, onChanged: (value) {})
 
@@ -117,41 +127,74 @@ class _AddEventState extends State<AddEvent> {
                   children: [
                     
                     Text("Day",
-
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                      ),
                     ),
                     
                     Spacer(),
 
                     DropdownButton(
                       value: 'Monday', // Assign the value to get a preview
-                      items: [
+                      items: const [
                         DropdownMenuItem(
                           value: 'Monday',
-                          child: Text('Monday'),
+                          child: Text('Monday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
                         ),
                         DropdownMenuItem(
                           value: 'Tuesday',
-                          child: Text('Tuesday'),
+                          child: Text('Tuesday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
                         ),
                         DropdownMenuItem(
                           value: 'Tuesday',
-                          child: Text('Wednesday'),
+                          child: Text('Wednesday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
                         ),
                         DropdownMenuItem(
                           value: 'Tuesday',
-                          child: Text('Thursday'),
+                          child: Text('Thursday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
                         ),
                         DropdownMenuItem(
                           value: 'Tuesday',
-                          child: Text('Friday'),
+                          child: Text('Friday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
                         ),
                         DropdownMenuItem(
                           value: 'Tuesday',
-                          child: Text('Saturday'),
+                          child: Text('Saturday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
                         ),
                         DropdownMenuItem(
                           value: 'Tuesday',
-                          child: Text('Sunday'),
+                          child: Text('Sunday',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),),
                         ),
                       ], onChanged: (value) {},
                     )
@@ -173,7 +216,12 @@ class _AddEventState extends State<AddEvent> {
                 child: Row(
                   children: [
 
-                      Text("Time"),
+                      Text("Time",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),),
                   ],
                 ),
               ),
@@ -196,7 +244,12 @@ class _AddEventState extends State<AddEvent> {
                 child: Row(
 
                   children: [
-                    Text("Repeat"),
+                    Text("Repeat",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),),
                     Spacer(),
                     CupertinoSwitch(value: true, onChanged: (value) {})
                   ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:student_planner/screens/overview.dart';
 import 'package:student_planner/screens/loading_screen.dart';
+import 'package:student_planner/components/overview_card.dart';
 
 void main() {
   runApp(const PlannerApp());

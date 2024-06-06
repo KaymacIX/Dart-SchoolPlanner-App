@@ -9,9 +9,11 @@ class Overview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       drawer: const NavDrawer(),
       backgroundColor: Color(0xff2c3d55),
       appBar: AppBar(
+
         centerTitle: false,
         backgroundColor: Color(0xff2c3d55),
         elevation: 0.0,
@@ -24,6 +26,7 @@ class Overview extends StatelessWidget {
         ),
       ),
       body: const SingleChildScrollView(
+        
 
       ),
       floatingActionButton: const AddButton(),
