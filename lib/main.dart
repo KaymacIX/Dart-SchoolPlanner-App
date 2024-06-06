@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_planner/screens/overview.dart';
-// import 'screens/overview.dart';
-import 'screens/loading_screen.dart';
+import 'package:student_planner/screens/loading_screen.dart';
 
 void main() {
   runApp(const PlannerApp());

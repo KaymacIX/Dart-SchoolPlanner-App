@@ -7,7 +7,7 @@ class AddButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      onPressed: () => Navigator.pushReplacement(context, MaterialPageRoute(
+      onPressed: () => Navigator.push(context, MaterialPageRoute(
         builder: (context) {
           return AddEvent();
           },

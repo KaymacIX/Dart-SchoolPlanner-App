@@ -12,71 +12,85 @@ class NavDrawer extends StatelessWidget {
     return Drawer(
       backgroundColor: const Color(0xff2c3d55),
 
-      child: ListView(
-        children: [
-          DrawerHeader(child: const Text("Overview",
-            style: TextStyle(
-                color: Colors.white
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 28),
+        child: ListView(
+          children: [
+
+            SizedBox(
+              height: 20,
             ),
-          )
-          ),
-          //OVERVIEW TILE
-          ListTile(
-            title: Text("Overview",
-            style: TextStyle(
-              color: Colors.white,
+
+            Text(
+              "School Planner",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+
+            Divider(),
+
+            SizedBox(height: 20,),
+            //OVERVIEW TILE
+            ListTile(
+              title: Text("Overview",
+              style: TextStyle(
+                color: Colors.white,
+              )
+              ),
+              onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
+                builder: (context) {
+                  return const Overview();
+                },
+              )),
+            ),
+
+            //TIMETABLE TILE
+            ListTile(
+              title: Text("Timetable",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
+              onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
+                builder: (context) {
+                  return Timetable();
+                },
+              )),
+            ),
+
+            //CALENDAR TILE
+            ListTile(
+              title: Text("Calendar",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
+                builder: (context) {
+                  return Calendar();
+                },
+              )),
+            ),
+
+            //AGENDA TILE
+            ListTile(
+              title: Text("Agenda",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
+                builder: (context) {
+                  return Agenda();
+                },
+              )),
             )
-            ),
-            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return Overview();
-              },
-            )),
-          ),
 
-          //TIMETABLE TILE
-          ListTile(
-            title: Text("Timetable",
-            style: TextStyle(
-              color: Colors.white,
-            ),
-            ),
-            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return Timetable();
-              },
-            )),
-          ),
-
-          //CALENDAR TILE
-          ListTile(
-            title: Text("Calendar",
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return Calendar();
-              },
-            )),
-          ),
-
-          //AGENDA TILE
-          ListTile(
-            title: Text("Agenda",
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) {
-                return Agenda();
-              },
-            )),
-          )
-
-        ],
+          ],
+        ),
       ),
     );
   }
