@@ -14,7 +14,7 @@ class _AddEventState extends State<AddEvent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff2c3d55),
+        backgroundColor: const Color(0xff2c3d55),
 
 
         appBar: AppBar(
@@ -35,10 +35,10 @@ class _AddEventState extends State<AddEvent> {
           actions: [
             ElevatedButton(
                 onPressed: () {},
-                child: Text("Add")
+                child: const Text("Add")
             )
           ],
-          backgroundColor: Color(0xff2c3d55),
+          backgroundColor: const Color(0xff2c3d55),
         ),
 
 
@@ -114,7 +114,7 @@ class _AddEventState extends State<AddEvent> {
 
               // DAY SELECTOR
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 18),
                 decoration: const BoxDecoration(
                   color: Color(0xff536271),
                   borderRadius: BorderRadius.only(
@@ -126,7 +126,7 @@ class _AddEventState extends State<AddEvent> {
                 child: Row(
                   children: [
                     
-                    Text("Day",
+                    const Text("Day",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -134,7 +134,7 @@ class _AddEventState extends State<AddEvent> {
                       ),
                     ),
                     
-                    Spacer(),
+                    const Spacer(),
 
                     // CupertinoDatePicker(onDateTimeChanged: (value){}),
 
@@ -210,12 +210,12 @@ class _AddEventState extends State<AddEvent> {
 
               // TIME SELECTOR
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 18),
                 decoration: const BoxDecoration(
                   color: Color(0xff536271),
                   ),
                 height: 60,
-                child: Row(
+                child: const Row(
                   children: [
 
                       Text("Time",
@@ -239,7 +239,7 @@ class _AddEventState extends State<AddEvent> {
 
               // IS REPEATING
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 18),
                 decoration: const BoxDecoration(
                   color: Color(0xff536271),
                   borderRadius: BorderRadius.only(
@@ -251,13 +251,13 @@ class _AddEventState extends State<AddEvent> {
                 child: Row(
 
                   children: [
-                    Text("Repeat",
+                    const Text("Repeat",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),),
-                    Spacer(),
+                    const Spacer(),
                     CupertinoSwitch(value: true, onChanged: (value) {})
                   ],
                 ),
