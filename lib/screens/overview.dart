@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:student_planner/components/floating_add_button.dart';
 import 'package:student_planner/components/nav_drawer.dart';
+import 'package:student_planner/components/overview_card.dart';
 // import 'package:sqflite/sqflite.dart';
 
 class Overview extends StatelessWidget {
@@ -11,21 +12,29 @@ class Overview extends StatelessWidget {
     return Scaffold(
 
       drawer: const NavDrawer(),
-      backgroundColor: Color(0xff2c3d55),
+      backgroundColor: const Color(0xff2c3d55),
       appBar: AppBar(
 
         centerTitle: false,
-        backgroundColor: Color(0xff2c3d55),
+        backgroundColor: const Color(0xff2c3d55),
         elevation: 0.0,
         title: const Text(
           "Overview",
           textAlign: TextAlign.left,
           style: TextStyle(
             color: Colors.white,
+            fontWeight: FontWeight.bold
           ),
         ),
       ),
       body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            OverviewCard(dayOfWeek: "Today", date: "6/06/2024", eventlist: ["Programming Presentation","3080 Class"]),
+            OverviewCard(dayOfWeek: "Tomorrow", date: "7/06/2024", eventlist: ["3011 Class", "3600 Class"]),
+            OverviewCard(dayOfWeek: "Wednesday", date: "8/06/2024", eventlist: ["Study Break"])
+          ],
+        ),
         
 
       ),

@@ -20,7 +20,7 @@ class _AddEventState extends State<AddEvent> {
         appBar: AppBar(
           leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: Icon(Icons.arrow_back,
+            icon: const Icon(Icons.arrow_back,
             color: Colors.white,
             ),
           ),
@@ -69,7 +69,7 @@ class _AddEventState extends State<AddEvent> {
                       hintText: "Event",
                       hintStyle: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                        // fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
@@ -95,14 +95,14 @@ class _AddEventState extends State<AddEvent> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("Active",
+                    const Text("Active",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     CupertinoSwitch(value: true, onChanged: (value) {})
 
                   ],
@@ -135,6 +135,8 @@ class _AddEventState extends State<AddEvent> {
                     ),
                     
                     Spacer(),
+
+                    // CupertinoDatePicker(onDateTimeChanged: (value){}),
 
                     DropdownButton(
                       value: 'Monday', // Assign the value to get a preview
@@ -222,6 +224,11 @@ class _AddEventState extends State<AddEvent> {
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                         ),),
+                    
+                    Spacer(),
+                    
+                    // TimePickerDialog(initialTime: TimeOfDay(hour: 10, minute: 30))
+                    // DropdownButton(items: CupertinoDatePicker, onChanged: onChanged)
                   ],
                 ),
               ),
