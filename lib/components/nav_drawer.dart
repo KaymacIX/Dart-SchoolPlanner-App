@@ -17,11 +17,11 @@ class NavDrawer extends StatelessWidget {
         child: ListView(
           children: [
 
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
 
-            Text(
+            const Text(
               "School Planner",
               style: TextStyle(
                 color: Colors.white,
@@ -30,12 +30,12 @@ class NavDrawer extends StatelessWidget {
               ),
             ),
 
-            Divider(),
+            const Divider(),
 
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             //OVERVIEW TILE
             ListTile(
-              title: Text("Overview",
+              title: const Text("Overview",
               style: TextStyle(
                 color: Colors.white,
               )
@@ -49,42 +49,42 @@ class NavDrawer extends StatelessWidget {
 
             //TIMETABLE TILE
             ListTile(
-              title: Text("Timetable",
+              title: const Text("Timetable",
               style: TextStyle(
                 color: Colors.white,
               ),
               ),
               onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
                 builder: (context) {
-                  return Timetable();
+                  return const Timetable();
                 },
               )),
             ),
 
             //CALENDAR TILE
             ListTile(
-              title: Text("Calendar",
+              title: const Text("Calendar",
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
                 builder: (context) {
-                  return Calendar();
+                  return const Calendar();
                 },
               )),
             ),
 
             //AGENDA TILE
             ListTile(
-              title: Text("Agenda",
+              title: const Text("Agenda",
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
                 builder: (context) {
-                  return Agenda();
+                  return const Agenda();
                 },
               )),
             )

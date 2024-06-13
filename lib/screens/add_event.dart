@@ -33,9 +33,12 @@ class _AddEventState extends State<AddEvent> {
             ),
           ),
           actions: [
-            ElevatedButton(
-                onPressed: () {},
-                child: const Text("Add")
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Add",)
+              ),
             )
           ],
           backgroundColor: const Color(0xff2c3d55),
